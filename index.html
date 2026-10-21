@@ -1,218 +1,1137 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portfolio by Rama Wijaya</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Rama Wijaya &mdash; Data Analyst | Operations & Business Intelligence</title>
+  <meta name="description" content="Portfolio of Rama Wijaya: Data Analyst specializing in operations analytics, business intelligence, ERP data integrity, and automated cloud pipelines (SQL, PostgreSQL, BigQuery, Tableau, Power BI)." />
+  
+  <!-- Open Graph / Meta for WhatsApp & LinkedIn link previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rama Wijaya &mdash; Data Analyst" />
+  <meta property="og:description" content="Bridging physical operational reality with clean, automated cloud data pipelines." />
+  <meta property="og:url" content="https://wijaya-rama.github.io" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              900: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Portfolio</strong> by Rama Wijaya</a>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/ramawijaya1" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://medium.com/@ramawijaya.business" class="icon brands fa-medium-m" target="_blank"><span class="label">Medium</span></a></li>
-										<li><a href="#" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
-									</ul>
-								</header>
+  <style>
+    /* Mobile: strict overflow guard against horizontal shifting */
+    @media (max-width: 1023px) {
+      html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+        width: 100%;
+      }
+    }
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Hello there! I'm Rama 🙌🏽<br />
-											</h1>
-											<p>Data Enthusiast. Learning. Creativity.</p>
-										</header>
-										<p>I'm Rama Wijaya, a Data Analyst based in Indonesia. I'm a data enthusiast with a strong passion for crunching numbers and deriving insights. When I'm not diving into data, you'll find me buried in a good book, exploring new realms and gaining knowledge.
-										In my spare time, I'm also a fitness enthusiast, hitting the gym or working out to stay healthy and energized. I believe in the power of a balanced lifestyle that combines mental agility with physical well-being.</p>
-										<ul class="actions">
-											<li><a href="#section-id" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/DSC00058.jpg" alt="" />
-									</span>
-								</section>
+    /* Desktop: pure viewport scrolling so lg:sticky lg:top-0 stays 100% locked */
+    @media (min-width: 1024px) {
+      html {
+        overflow-x: clip;
+      }
+      body {
+        overflow-x: visible;
+        max-width: 100vw;
+        width: 100%;
+      }
+    }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Recent Projects</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-heart"></span>
-											<div class="content">
-												<h3><a href="https://public.tableau.com/app/profile/rama.wijaya8072/viz/Top7IndonesiaSkincarefromFemaledaily_com/Dashboard1" target="_blank">Indonesian Skincare Insights</a></h3>
-												<p>Tableau Public dashboard featuring insights on the top Indonesian skincare products.</p>
-											</div>
-										</article>										
-										<article>
-												<span class="icon solid fa-clock"></span>
-												<div class="content">
-													<h3><a href="https://www.kaggle.com/code/rimbax/detection-converting-hour-into-periodic-signal" target="_blank">Kaggle Competition</a></h3>
-													<p>A Kaggle competition project titled "Child Mind Institute - Detect Sleep States" that I am working on with two of my friends. This competition involves machine learning.</p>
-												</div>
-											</a>
-										</article>										
-										<article>
-											<span class="icon solid fa-virus"></span>
-											<div class="content">
-												<h3><a href="https://github.com/wijaya-rama/wijaya-rama/blob/main/COVID%2019%20Portfolio%20Project%20-%20Data%20Exploration.sql" target="_blank">Data Analysis with SQL Server</a></h3>
-												<p>Exploring and analyzing global COVID-19 data using SQL Server to gain valuable insights into the pandemic's effects across various regions.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-feather"></span>
-											<div class="content">
-												<h3><a href="https://lookerstudio.google.com/reporting/7b01a7d7-6a3f-48dd-9ec2-e96eb6367e64" target="_blank">Chicken Population Distribution Dashboard</a></h3>
-												<p>This dashboard was created using Google Looker Studio and contains data on the distribution of chicken populations in Indonesia.</p>
-											</div>
-										</article>										
-									</div>
-								</section>
+    ::selection {
+      background: #dbeafe;
+      color: #1e3a8a;
+    }
+    
+    /* Subtle spotlight cursor glow (desktop only) */
+    .spotlight {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: radial-gradient(650px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(37, 99, 235, 0.04), transparent 80%);
+    }
 
-							<!-- Section -->
-								<section>
-									<div id="section-id">
-										<header class="major">
-											<h2>Portfolio</h2>
-										</header>
-										<div class="posts">
-											<article>
-												<a href="https://github.com/wijaya-rama/wijaya-rama/tree/main" target="_blank" class="image"><img src="images/github.jpg" alt="" /></a>
-												<h3>Github Projects</h3>
-												<p>Explore some of my coding adventures and projects on GitHub. Here, you'll find a variety of repositories showcasing my work, from data analysis to coding experiments.</p>
-												<ul class="actions">
-													<li><a href="https://github.com/wijaya-rama/wijaya-rama/tree/main" target="_blank" class="button">More</a></li>
-												</ul>
-											</article>
-											<article>
-												<a href="https://public.tableau.com/app/profile/rama.wijaya8072/vizzes" target="_blank" class="image"><img src="images/tableau cat.jpg" alt="" /></a>
-												<h3>My Tableau Dashboard Visualization</h3>
-												<p>Explore my Tableau dashboard visualizations, where data comes to life in an interactive and informative way. Dive into various data stories and insights.</p>
-												<ul class="actions">
-													<li><a href="https://public.tableau.com/app/profile/rama.wijaya8072/vizzes" target="_blank" class="button">More</a></li>
-												</ul>
-											</article>
-											<article>
-												<a href="https://www.kaggle.com/wijayarama" target="_blank" class="image"><img src="images/kaggle.jpg" alt="" /></a>
-												<h3>Data Science Projects on Kaggle</h3>
-												<p>Explore my data science projects and insights on Kaggle. Dive into the fascinating world of data science and uncover valuable insights and knowledge.</p>
-												<ul class="actions">
-													<li><a href="https://www.kaggle.com/wijayarama" target="_blank" class="button">More</a></li>
-												</ul>
-											</article>
-										</div>
-									</div>
-								</section>
+    /* Cohesive card hover effect */
+    .hover-card {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid transparent;
+      border-radius: 1rem;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .hover-card:hover {
+        background: rgba(255, 255, 255, 0.85);
+        border-color: rgba(226, 232, 240, 0.9);
+        box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+        backdrop-filter: blur(8px);
+      }
+    }
 
-						</div>
-					</div>
+    /* Modern Interactive Project Card (Futuristic lift, soft tech-blue glow, motion zoom) */
+    .project-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(226, 232, 240, 0.85);
+      border-radius: 1.25rem;
+      background: rgba(255, 255, 255, 0.55);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .project-card:hover {
+        background: rgba(255, 255, 255, 0.98);
+        border-color: rgba(147, 197, 253, 0.85);
+        transform: translateY(-4px) scale(1.01);
+        box-shadow: 0 24px 50px -15px rgba(37, 99, 235, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.18);
+        backdrop-filter: blur(12px);
+      }
+    }
+    .project-preview-window {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .project-card:hover .project-preview-window {
+      border-color: rgba(147, 197, 253, 0.8);
+      box-shadow: 0 12px 28px -10px rgba(37, 99, 235, 0.14);
+    }
+    .preview-img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .project-card:hover .preview-img {
+      transform: scale(1.025);
+    }
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+    /* Smooth staggered scroll entrance (Apple/Linear style) */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
+    /* Left Sidebar Active Nav Spring Extension */
+    .nav-item.active .nav-indicator {
+      width: 3.5rem !important;
+      background-color: #2563eb !important;
+      box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+    }
+    .nav-item.active .nav-text {
+      color: #0f172a !important;
+      font-weight: 700 !important;
+    }
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="aboutme.html">About Me</a></li>
-										<li><a href="project.html">Projects</a></li>
-										<li><a href="blog.html">Blogs</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="gallery.html">Gallery</a></li>
-												<li><a href="book.html">Book</a></li>
-												<li><a href="gym.html">Gym</a></li>
-												<li><a href="football.html">Football</a></li>
-											</ul>
-										</li>
-									</ul>
-								</nav>
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Portfolio</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="https://github.com/wijaya-rama/wijaya-rama/tree/main" target="_blank" class="image"><img src="images/github.jpg" alt="" /></a>
-											<p>Explore some of my coding adventures and projects on GitHub.</p>
-										</article>
-										<article>
-											<a href="https://public.tableau.com/app/profile/rama.wijaya8072/vizzes" target="_blank" class="image"><img src="images/tableau cat.jpg" alt="" /></a>
-											<p>Explore my Tableau dashboard visualizations, where data comes to life in an interactive and informative way.</p>
-										</article>
-										<article>
-											<a href="https://www.kaggle.com/wijayarama" target="_blank"  class="image"><img src="images/kaggle.jpg" alt="" /></a>
-											<p>Explore my data science projects and insights on Kaggle.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="project.html" class="button">More</a></li>
-									</ul>
-								</section>
+<body class="bg-[#F9FAFB] text-slate-700 font-sans antialiased relative selection:bg-blue-100 selection:text-blue-900 pb-24 lg:pb-0">
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Let's connect and stay in touch. I'm here to answer your questions and discuss exciting opportunities. Feel free to reach out through the following channels:</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="mailto:ramawijaya.business@gmail.com" target="_blank">ramawijaya.business@gmail.com</a></li>
-										<li class="icon solid fa-phone"><a href="https://wa.me/+6285783038095" target="_blank">(+628) 5783-038095</a></li>
-										<li class="icon solid fa-home">Yogyakarta, Indonesia</li>
-									</ul>
-								</section>
+  <!-- Top Micro Reading Progress Rail (Apple/Linear style) -->
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[2.5px] bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-400 z-50 transition-all duration-75 pointer-events-none" style="width: 0%;"></div>
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+  <!-- Interactive Subtle Spotlight (Desktop only) -->
+  <div class="spotlight hidden md:block"></div>
 
-						</div>
-					</div>
+  <!-- Soft ambient gradients for light depth -->
+  <div class="fixed top-0 left-0 w-[450px] h-[450px] bg-blue-100/35 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-0 right-0 w-[450px] h-[450px] bg-slate-200/40 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
-			</div>
+  <!-- Main Container -->
+  <div class="mx-auto min-h-screen max-w-screen-xl px-4 sm:px-8 md:px-12 lg:px-20 lg:py-0">
+    <div class="lg:flex lg:justify-between lg:gap-14 xl:gap-20">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- =================================================================== -->
+      <!-- LEFT COLUMN: Sticky Header, Navigation & Quick Actions -->
+      <!-- =================================================================== -->
+      <aside class="pt-8 sm:pt-12 lg:sticky lg:top-0 lg:flex lg:h-screen lg:max-h-screen lg:w-[44%] xl:w-[40%] lg:flex-col lg:justify-between lg:py-10 xl:py-12 shrink-0">
+        
+        <div>
+          <!-- Status Tag -->
+          <div class="mb-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200/80">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Open for Full-Time & Projects
+            </span>
+          </div>
 
-	</body>
+          <!-- Name & Core Title -->
+          <h1 class="text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-slate-900">
+            Rama Wijaya
+          </h1>
+          <h2 class="mt-2 text-base sm:text-lg font-semibold text-blue-600 tracking-tight">
+            Data Analyst
+          </h2>
+          <p class="text-[11px] sm:text-xs font-mono font-medium text-slate-500 uppercase tracking-wider mt-0.5">
+            Operations Analytics &bull; BI &bull; Cloud Pipelines
+          </p>
+
+          <!-- Crisp Professional Hook -->
+          <p class="mt-3 max-w-sm text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+            I turn fragmented, high-volume operational data into clean, automated cloud pipelines and executive decision engines. Experienced in enterprise ERP environments, cloud data warehouses, and interactive BI reporting.
+          </p>
+
+          <!-- Brittany Chiang Style Nav Menu (Desktop only) -->
+          <nav class="nav hidden lg:block mt-6 xl:mt-8" aria-label="In-page jump links">
+            <ul class="space-y-2 text-xs font-semibold tracking-wider uppercase text-slate-400">
+              <li>
+                <a href="#about" class="nav-item group flex items-center py-1 transition-colors hover:text-slate-900 active" data-section="about">
+                  <span class="nav-indicator mr-3 h-px w-6 bg-slate-300 transition-all duration-200 group-hover:w-12 group-hover:bg-slate-900 group-[.active]:w-12 group-[.active]:bg-blue-600"></span>
+                  <span class="nav-text group-[.active]:text-blue-600 group-[.active]:font-bold group-hover:text-slate-900">01 // About</span>
+                </a>
+              </li>
+              <li>
+                <a href="#experience" class="nav-item group flex items-center py-1 transition-colors hover:text-slate-900" data-section="experience">
+                  <span class="nav-indicator mr-3 h-px w-6 bg-slate-300 transition-all duration-200 group-hover:w-12 group-hover:bg-slate-900 group-[.active]:w-12 group-[.active]:bg-blue-600"></span>
+                  <span class="nav-text group-[.active]:text-blue-600 group-[.active]:font-bold group-hover:text-slate-900">02 // Experience</span>
+                </a>
+              </li>
+              <li>
+                <a href="#projects" class="nav-item group flex items-center py-1 transition-colors hover:text-slate-900" data-section="projects">
+                  <span class="nav-indicator mr-3 h-px w-6 bg-slate-300 transition-all duration-200 group-hover:w-12 group-hover:bg-slate-900 group-[.active]:w-12 group-[.active]:bg-blue-600"></span>
+                  <span class="nav-text group-[.active]:text-blue-600 group-[.active]:font-bold group-hover:text-slate-900">03 // Featured Projects</span>
+                </a>
+              </li>
+              <li>
+                <a href="#systems" class="nav-item group flex items-center py-1 transition-colors hover:text-slate-900" data-section="systems">
+                  <span class="nav-indicator mr-3 h-px w-6 bg-slate-300 transition-all duration-200 group-hover:w-12 group-hover:bg-slate-900 group-[.active]:w-12 group-[.active]:bg-blue-600"></span>
+                  <span class="nav-text group-[.active]:text-blue-600 group-[.active]:font-bold group-hover:text-slate-900">04 // Systems & Solutions</span>
+                </a>
+              </li>
+              <li>
+                <a href="#skills" class="nav-item group flex items-center py-1 transition-colors hover:text-slate-900" data-section="skills">
+                  <span class="nav-indicator mr-3 h-px w-6 bg-slate-300 transition-all duration-200 group-hover:w-12 group-hover:bg-slate-900 group-[.active]:w-12 group-[.active]:bg-blue-600"></span>
+                  <span class="nav-text group-[.active]:text-blue-600 group-[.active]:font-bold group-hover:text-slate-900">05 // Skills & Stack</span>
+                </a>
+              </li>
+              <li>
+                <a href="#credentials" class="nav-item group flex items-center py-1 transition-colors hover:text-slate-900" data-section="credentials">
+                  <span class="nav-indicator mr-3 h-px w-6 bg-slate-300 transition-all duration-200 group-hover:w-12 group-hover:bg-slate-900 group-[.active]:w-12 group-[.active]:bg-blue-600"></span>
+                  <span class="nav-text group-[.active]:text-blue-600 group-[.active]:font-bold group-hover:text-slate-900">06 // Background</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="nav-item group flex items-center py-1 transition-colors hover:text-slate-900" data-section="contact">
+                  <span class="nav-indicator mr-3 h-px w-6 bg-slate-300 transition-all duration-200 group-hover:w-12 group-hover:bg-slate-900 group-[.active]:w-12 group-[.active]:bg-blue-600"></span>
+                  <span class="nav-text group-[.active]:text-blue-600 group-[.active]:font-bold group-hover:text-slate-900">07 // Contact</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Action CTAs & Social Links -->
+        <div class="mt-6 lg:mt-0 pt-4 border-t border-slate-200/70">
+          <div class="flex flex-wrap items-center gap-2 mb-3">
+            <a 
+              href="mailto:ramawijaya.business@gmail.com?subject=Resume%20Request%20-%20Rama%20Wijaya&body=Hi%20Rama,%20I%20would%20like%20to%20request%20a%20copy%20of%20your%20full%20resume." 
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-blue-600 active:scale-95 transition-all shadow-xs"
+              title="Request complete CV via email"
+            >
+              <svg class="w-3.5 h-3.5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <span>Request Resume</span>
+            </a>
+            
+            <button 
+              id="copy-email-quick" 
+              onclick="copyEmailToClipboard()"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:border-slate-300 hover:bg-slate-50 active:scale-95 transition-all shadow-2xs"
+            >
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+              <span id="copy-email-text">Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Social Links (With generous finger tap padding) -->
+          <div class="flex items-center gap-1 text-slate-400">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/ramawijaya1" target="_blank" rel="noreferrer" class="p-2 rounded-lg hover:text-blue-600 hover:bg-slate-100/80 transition-colors" title="LinkedIn Profile">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.54a1.63 1.63 0 0 0-1.63 1.63 1.63 1.63 0 0 0 1.63 1.63 1.63 1.63 0 0 0 1.63-1.63c0-.9-.73-1.63-1.63-1.63Z"/></svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/wijaya-rama" target="_blank" rel="noreferrer" class="p-2 rounded-lg hover:text-slate-900 hover:bg-slate-100/80 transition-colors" title="GitHub">
+              <span class="sr-only">GitHub</span>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+
+            <!-- Tableau Public -->
+            <a href="https://public.tableau.com/app/profile/rama.wijaya8072/vizzes" target="_blank" rel="noreferrer" class="p-2 rounded-lg hover:text-[#E97627] hover:bg-slate-100/80 transition-colors" title="Tableau Public">
+              <span class="sr-only">Tableau Public</span>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.39 2.5v2.85H8.54V6.5h2.85v2.85h1.15V6.5h2.85V5.35h-2.85V2.5zm5.72 4.41v2.17h-2.18v.99h2.18v2.17h1v-2.17h2.18v-.99H18.1V6.91zm-11.44.15v2.02H3.5v.99h2.17v2.02h.99V10.07h2.17v-.99H6.66V7.06zm5.72 4.26v3.25H7.98v1.33h3.39v3.25h1.33v-3.25h3.39v-1.33h-3.39v-3.25zm5.72 4.4v2.02h-2.18v.99h2.18v2.02h1v-2.02h2.18v-.99H18.1v-2.02zm-11.44.15v2.02H3.5v.99h2.17v2.02h.99v-2.02h2.17v-.99H6.66v-2.02z"/></svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6285783038095" target="_blank" rel="noreferrer" class="p-2 rounded-lg hover:text-emerald-600 hover:bg-slate-100/80 transition-colors" title="WhatsApp Chat">
+              <span class="sr-only">WhatsApp</span>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.53c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.26-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.13.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:ramawijaya.business@gmail.com" class="p-2 rounded-lg hover:text-blue-600 hover:bg-slate-100/80 transition-colors" title="Send Email">
+              <span class="sr-only">Email</span>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </aside>
+
+
+      <!-- =================================================================== -->
+      <!-- RIGHT COLUMN: Seamless Content Stream (Guaranteed No Horizontal Overflow) -->
+      <!-- =================================================================== -->
+      <main class="pt-10 sm:pt-14 lg:w-[56%] xl:w-[60%] lg:py-12 xl:py-16 space-y-14 sm:space-y-20 min-w-0">
+
+        <!-- ========================================== -->
+        <!-- SECTION 1: ABOUT -->
+        <!-- ========================================== -->
+        <section id="about" class="scroll-mt-16 lg:scroll-mt-16 reveal-on-scroll">
+          <!-- Mobile Sticky Header -->
+          <div class="sticky top-0 z-20 py-2.5 bg-[#F9FAFB]/95 backdrop-blur-md border-b border-slate-200/60 mb-3.5 lg:sr-only">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">01 // About</h2>
+          </div>
+
+          <div class="space-y-3.5 text-slate-600 leading-relaxed text-sm sm:text-[15px]">
+            <p>
+              I work where operational reality meets practical data engineering. Instead of focusing only on pre-cleaned sandbox datasets, my background comes from fast-paced, high-volume production facilities&mdash;where data usually starts fragmented across desktop spreadsheets, handwritten tallies, or rigid ERP ledgers.
+            </p>
+            <p>
+              Over the past few years, I have built central data pipelines from scratch, scaled database architectures to prevent local file crashes, and supported enterprise ERP deployments. I specialize in identifying where numbers deviate from physical reality, automating manual reporting routines, and turning operational logs into interactive BI dashboards that decision-makers actually rely on.
+            </p>
+            <p>
+              Today, my focus centers on building reliable data pipelines, operational modeling, and actionable business intelligence. I am actively open to full-time opportunities and strategic projects where practical field knowledge and clean analytics drive measurable business impact.
+            </p>
+          </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- SECTION 2: EXPERIENCE -->
+        <!-- ========================================== -->
+        <section id="experience" class="scroll-mt-16 lg:scroll-mt-16 reveal-on-scroll">
+          <!-- Mobile Sticky Header -->
+          <div class="sticky top-0 z-20 py-2.5 bg-[#F9FAFB]/95 backdrop-blur-md border-b border-slate-200/60 mb-3.5 lg:sr-only">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">02 // Experience</h2>
+          </div>
+
+          <div class="space-y-3">
+
+            <!-- Role 1: AAM Investment Group -->
+            <div class="hover-card p-3.5 sm:p-5 group">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                <h3 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  Data Analyst &bull; Independent Consultant (Project-Based)
+                </h3>
+                <span class="text-xs font-mono text-slate-400 mt-0.5 sm:mt-0">Jul 2026 &ndash; Sept 2026</span>
+              </div>
+              <h4 class="text-xs font-medium text-slate-500 mb-2">Investment Advisory Engagement &bull; Remote</h4>
+              
+              <ul class="space-y-1 text-xs sm:text-sm text-slate-600 list-disc list-outside ml-4 mb-3 leading-relaxed">
+                <li>Performed business data audits and exploratory queries using SQL and Python to evaluate investment targets.</li>
+                <li>Validated raw commercial and transactional ledgers for completeness, flagging inconsistencies and data gaps prior to executive review.</li>
+                <li>Reconciled reporting discrepancies across historical operational records.</li>
+              </ul>
+
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">SQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Python</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Data Auditing</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Exploratory Analysis</span>
+              </div>
+            </div>
+
+            <!-- Role 2: PT Indonesia Livestock Operations -->
+            <div class="hover-card p-3.5 sm:p-5 group">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                <h3 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  Data Analyst & Operations Planner
+                </h3>
+                <span class="text-xs font-mono text-slate-400 mt-0.5 sm:mt-0">Jul 2025 &ndash; Jun 2026</span>
+              </div>
+              <h4 class="text-xs font-medium text-slate-500 mb-2">PT Indonesia Livestock Operations &bull; Lampung & Tangerang</h4>
+              
+              <ul class="space-y-1 text-xs sm:text-sm text-slate-600 list-disc list-outside ml-4 mb-3 leading-relaxed">
+                <li>Managed sales, inbound livestock schedules, and raw material demand projections across feedlot facilities.</li>
+                <li>Supported enterprise <strong>Microsoft Dynamics 365</strong> rollout: validated opening balances, established data hygiene protocols, and conducted repetitive transaction training.</li>
+                <li>Solved local laptop Excel crash limits by deploying an <strong>Azure PostgreSQL</strong> cloud database linked to automated Power BI dashboards and Power Automate alert triggers.</li>
+                <li>Monitored plan vs. actual variances across purchasing, storage, and milling to prevent supply chain bottlenecks.</li>
+              </ul>
+
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-blue-50 text-blue-700 border border-blue-100">Microsoft Dynamics 365</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Azure PostgreSQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Power BI</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Power Automate</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Operations Planning</span>
+              </div>
+            </div>
+
+            <!-- Role 3: PT Indo Prima Beef -->
+            <div class="hover-card p-3.5 sm:p-5 group">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                <h3 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  Operations Analyst & Planning Lead
+                </h3>
+                <span class="text-xs font-mono text-slate-400 mt-0.5 sm:mt-0">May 2024 &ndash; Jul 2025</span>
+              </div>
+              <h4 class="text-xs font-medium text-slate-500 mb-2">PT Indo Prima Beef &bull; Central Lampung</h4>
+              
+              <ul class="space-y-1 text-xs sm:text-sm text-slate-600 list-disc list-outside ml-4 mb-3 leading-relaxed">
+                <li>Promoted twice within 12 months from operations analyst to planning section lead.</li>
+                <li>Built cloud warehouse from zero: wrote Google Apps Script to ingest standardized Google Sheets data into <strong>Google BigQuery</strong>, connected to auto-updating Looker Studio dashboards.</li>
+                <li>Audited administrative transaction entries in <strong>Tally ERP</strong> to eliminate discrepancies between physical stock and digital records.</li>
+                <li>Modeled daily feed formulation plans and ration adjustments to optimize weight gain and maintain cost efficiency.</li>
+              </ul>
+
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-blue-50 text-blue-700 border border-blue-100">Tally ERP</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Google BigQuery</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Google Apps Script</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Looker Studio</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Ration Modeling</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+                        <!-- ========================================== -->
+        <!-- SECTION 3: FEATURED PROJECTS -->
+        <!-- ========================================== -->
+        <section id="projects" class="scroll-mt-16 lg:scroll-mt-16 reveal-on-scroll">
+          <!-- Mobile Sticky Header -->
+          <div class="sticky top-0 z-20 py-2.5 bg-[#F9FAFB]/95 backdrop-blur-md border-b border-slate-200/60 mb-3.5 lg:sr-only">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">03 // Featured Projects</h2>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-4">
+            <p class="text-xs text-slate-500 font-mono leading-relaxed">
+              Production data models, executive web storyboards, and interactive dashboards.
+            </p>
+            <span class="text-[11px] font-mono text-blue-600 font-semibold shrink-0">Click preview to launch ↗</span>
+          </div>
+
+          <div class="space-y-5">
+
+            <!-- Project 1: Beef Feedlot Economics -->
+            <div class="project-card p-3.5 sm:p-5 group">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1.5">
+                <span class="text-xs font-mono font-semibold text-blue-600">Agribusiness Analytics</span>
+                <span class="text-[11px] sm:text-xs font-mono text-slate-400">15,000 Head &bull; 90 Lots</span>
+              </div>
+
+              <h3 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                Commercial Beef Feedlot Operations & Closeout Economics
+              </h3>
+              
+              <p class="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Investigated closeout margin dynamics, carcass tonnage vs. quality grid arbitrage (yield beating marbling premiums), winter thermal drag mitigation in sheltered barns, and the financial impact of the 30-day BRD treatment window. Engineered with custom Star Schema architecture.
+              </p>
+
+              <!-- Interactive Dashboard Mockup Frame (Direct Link to Live Demo) -->
+              <div class="mt-3.5 mb-3 rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-xs project-preview-window">
+                <div class="h-6 bg-slate-100/90 border-b border-slate-200/80 px-2.5 flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]/80"></span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400 truncate max-w-[200px]">feedlot-management.live &bull; Alberta, Canada</span>
+                  <span class="text-[10px] font-mono text-emerald-600 font-semibold flex items-center gap-1.5">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span>Live</span>
+                  </span>
+                </div>
+                <a 
+                  href="https://wijaya-rama.github.io/portfolio-feedlot-management/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="block relative overflow-hidden aspect-[16/9] bg-slate-50 cursor-pointer"
+                  title="Open Live Storyboard"
+                >
+                  <img 
+                    src="images/feedlot_thumb.png" 
+                    alt="Commercial Beef Feedlot Operations Dashboard" 
+                    class="w-full h-full object-cover object-top preview-img"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 my-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-blue-50 text-blue-700 border border-blue-100">Tableau Desktop</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Star Schema</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Closeout Economics</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Bento UI</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="flex flex-wrap items-center gap-2 pt-2.5 border-t border-slate-200/60 text-xs font-semibold">
+                <a 
+                  href="https://wijaya-rama.github.io/portfolio-feedlot-management/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>Live Demo</span>
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a 
+                  href="https://public.tableau.com/app/profile/rama.wijaya8072/vizzes" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-[#E97627] hover:bg-slate-200 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>Tableau Viz</span>
+                </a>
+                <a 
+                  href="https://github.com/wijaya-rama/portfolio-feedlot-management" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2: Commercial Broiler Operations Hub -->
+            <div class="project-card p-3.5 sm:p-5 group">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1.5">
+                <span class="text-xs font-mono font-semibold text-blue-600">Poultry Integration Analytics</span>
+                <span class="text-[11px] sm:text-xs font-mono text-slate-400">72 Flocks &bull; 1.78M Birds</span>
+              </div>
+
+              <h3 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                Commercial Broiler Operations Hub & Performance Index
+              </h3>
+              
+              <p class="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Audited commercial performance divergence between Closed House and Open House units. Analyzed net margin differences (+Rp 4,762/kg in closed houses), microclimate heat stress (feed dissipation vs. growth), late-mortality timing, and the European Performance Index (EPEF / IP).
+              </p>
+
+              <!-- Interactive Dashboard Mockup Frame (Direct Link to Live Demo) -->
+              <div class="mt-3.5 mb-3 rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-xs project-preview-window">
+                <div class="h-6 bg-slate-100/90 border-b border-slate-200/80 px-2.5 flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]/80"></span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400 truncate max-w-[200px]">smart-broiler.live &bull; 4,031 Tons Harvested</span>
+                  <span class="text-[10px] font-mono text-emerald-600 font-semibold flex items-center gap-1.5">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span>Live</span>
+                  </span>
+                </div>
+                <a 
+                  href="https://wijaya-rama.github.io/portfolio-smart-broiler/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="block relative overflow-hidden aspect-[16/9] bg-slate-50 cursor-pointer"
+                  title="Open Live Storyboard"
+                >
+                  <img 
+                    src="images/broiler_thumb.png" 
+                    alt="Commercial Broiler Operations Hub Dashboard" 
+                    class="w-full h-full object-cover object-top preview-img"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 my-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-blue-50 text-blue-700 border border-blue-100">Tableau Desktop</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">SQL & Python</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">EPEF Modeling</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Closed vs Open</span>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2 pt-2.5 border-t border-slate-200/60 text-xs font-semibold">
+                <a 
+                  href="https://wijaya-rama.github.io/portfolio-smart-broiler/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>Live Demo</span>
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a 
+                  href="https://public.tableau.com/app/profile/rama.wijaya8072/vizzes" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-[#E97627] hover:bg-slate-200 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>Tableau Viz</span>
+                </a>
+                <a 
+                  href="https://github.com/wijaya-rama/portfolio-smart-broiler" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3: Retail Workforce Productivity -->
+            <div class="project-card p-3.5 sm:p-5 group">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1.5">
+                <span class="text-xs font-mono font-semibold text-blue-600">Commercial Workforce Analytics</span>
+                <span class="text-[11px] sm:text-xs font-mono text-slate-400">2,000 Employees &bull; 24 Stores</span>
+              </div>
+
+              <h3 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                Retail Workforce Productivity & Attrition Analysis
+              </h3>
+              
+              <p class="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Evaluated store-level labor cost structures, store format productivity, and employee turnover. Quantified micromanagement attrition risk (49% peak under micromanagement), evaluated scheduling efficiency across retail formats, and mapped retention across the 9-Box grid.
+              </p>
+
+              <!-- Interactive Dashboard Mockup Frame (Direct Link to Live Demo) -->
+              <div class="mt-3.5 mb-3 rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-xs project-preview-window">
+                <div class="h-6 bg-slate-100/90 border-b border-slate-200/80 px-2.5 flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]/80"></span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400 truncate max-w-[200px]">retail-workforce.live &bull; 24 Stores</span>
+                  <span class="text-[10px] font-mono text-emerald-600 font-semibold flex items-center gap-1.5">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span>Live</span>
+                  </span>
+                </div>
+                <a 
+                  href="https://wijaya-rama.github.io/portfolio-retail-workforce/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="block relative overflow-hidden aspect-[16/9] bg-slate-50 cursor-pointer"
+                  title="Open Live Storyboard"
+                >
+                  <img 
+                    src="images/retail_thumb.png" 
+                    alt="Retail Workforce Productivity Dashboard" 
+                    class="w-full h-full object-cover object-top preview-img"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 my-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-blue-50 text-blue-700 border border-blue-100">Tableau Desktop</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Star Schema</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">9-Box Grid</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Attrition Risk</span>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2 pt-2.5 border-t border-slate-200/60 text-xs font-semibold">
+                <a 
+                  href="https://wijaya-rama.github.io/portfolio-retail-workforce/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>Live Demo</span>
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a 
+                  href="https://public.tableau.com/app/profile/rama.wijaya8072/vizzes" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-[#E97627] hover:bg-slate-200 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>Tableau Viz</span>
+                </a>
+                <a 
+                  href="https://github.com/wijaya-rama/portfolio-retail-workforce" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 4: Indonesian Beauty & Skincare Market Intelligence -->
+            <div class="project-card p-3.5 sm:p-5 group">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1.5">
+                <span class="text-xs font-mono font-semibold text-blue-600">Market Intelligence & Consumer Analytics</span>
+                <span class="text-[11px] sm:text-xs font-mono text-slate-400">1,204 Brands &bull; 598,891 Reviews</span>
+              </div>
+
+              <h3 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                Indonesian Beauty & Skincare Market Intelligence
+              </h3>
+              
+              <p class="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Evaluated product scores, consumer review volumes, and brand competitive positioning across Indonesian skincare categories scraped from FemaleDaily. Modeled category distributions, product score leaders, and reviewer density.
+              </p>
+
+              <!-- Interactive Dashboard Mockup Frame (Direct Link to Tableau) -->
+              <div class="mt-3.5 mb-3 rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-xs project-preview-window">
+                <div class="h-6 bg-slate-100/90 border-b border-slate-200/80 px-2.5 flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]/80"></span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400 truncate max-w-[200px]">public.tableau.com &bull; FemaleDaily Intelligence</span>
+                  <span class="text-[10px] font-mono text-[#E97627] font-semibold flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-[#E97627]"></span> Tableau
+                  </span>
+                </div>
+                <a 
+                  href="https://public.tableau.com/app/profile/rama.wijaya8072/viz/Top7IndonesiaSkincarefromFemaledaily_com/Dashboard1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="block relative overflow-hidden aspect-[16/9] bg-slate-50 cursor-pointer"
+                  title="Open Tableau Dashboard"
+                >
+                  <img 
+                    src="images/skincare_thumb.png" 
+                    alt="Indonesian Skincare Market Intelligence Dashboard" 
+                    class="w-full h-full object-cover object-top preview-img"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 my-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-blue-50 text-blue-700 border border-blue-100">Tableau Public</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Market Intelligence</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">Sentiment & Ratings</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-700">FemaleDaily Data</span>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2 pt-2.5 border-t border-slate-200/60 text-xs font-semibold">
+                <a 
+                  href="https://public.tableau.com/app/profile/rama.wijaya8072/viz/Top7IndonesiaSkincarefromFemaledaily_com/Dashboard1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>Open Tableau Dashboard</span>
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a 
+                  href="https://public.tableau.com/app/profile/rama.wijaya8072/vizzes" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-[#E97627] hover:bg-slate-200 hover:-translate-y-0.5 active:scale-95 transition-all"
+                >
+                  <span>All Vizzes</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- SECTION 4: SYSTEMS & SOLUTIONS -->
+        <!-- ========================================== -->
+        <section id="systems" class="scroll-mt-16 lg:scroll-mt-16 reveal-on-scroll">
+          <!-- Mobile Sticky Header -->
+          <div class="sticky top-0 z-20 py-2.5 bg-[#F9FAFB]/95 backdrop-blur-md border-b border-slate-200/60 mb-3.5 lg:sr-only">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">04 // Systems & Solutions</h2>
+          </div>
+
+          <div class="space-y-3">
+
+            <!-- Solution 1: Google Sheets to BigQuery -->
+            <div class="hover-card p-3.5 sm:p-5">
+              <h3 class="text-sm sm:text-base font-bold text-slate-900 mb-1.5">
+                Automated Cloud Ingestion: Google Sheets to BigQuery
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-2.5">
+                When an operation relied on decentralized sheets across various department laptops, daily reporting was manually compiled and error-prone. I standardized data entry structures, authored automated ingestion triggers using Google Apps Script to pipe verified daily rows directly into Google BigQuery, and built auto-updating Looker Studio dashboards for live executive monitoring.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Google BigQuery</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Google Apps Script</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Looker Studio</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Automated ETL</span>
+              </div>
+            </div>
+
+            <!-- Solution 2: Azure PostgreSQL Bridge -->
+            <div class="hover-card p-3.5 sm:p-5">
+              <h3 class="text-sm sm:text-base font-bold text-slate-900 mb-1.5">
+                Overcoming Excel Workbook Memory Limits with Azure PostgreSQL
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-2.5">
+                As daily transaction history scaled into tens of thousands of rows, master Excel workbooks regularly froze and crashed local office machines. I migrated storage and heavy aggregation queries to an Azure PostgreSQL cloud database, exposing clean SQL views that connected seamlessly to lightweight Power BI reporting models and alert triggers via Power Automate.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Azure PostgreSQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Power BI</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Power Automate</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">SQL Views</span>
+              </div>
+            </div>
+
+            <!-- Solution 3: Nutrition & Cost Optimization -->
+            <div class="hover-card p-3.5 sm:p-5">
+              <h3 class="text-sm sm:text-base font-bold text-slate-900 mb-1.5">
+                Least-Cost Feed Formulation & Resource Optimization
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-2.5">
+                Raw material feed costs represent the largest expense category in livestock operations. Leveraging background in animal nutrition and quantitative trial modeling, I built mathematical formulation sheets that balanced essential nutrient requirements (crude protein, energy, minerals) against volatile commodity ingredient prices to protect operating margins.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Linear Optimization</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Animal Nutrition</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Cost Modeling</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- SECTION 5: SKILLS & TOOLS -->
+        <!-- ========================================== -->
+        <section id="skills" class="scroll-mt-16 lg:scroll-mt-16 reveal-on-scroll">
+          <!-- Mobile Sticky Header -->
+          <div class="sticky top-0 z-20 py-2.5 bg-[#F9FAFB]/95 backdrop-blur-md border-b border-slate-200/60 mb-3.5 lg:sr-only">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">05 // Skills & Stack</h2>
+          </div>
+
+          <div class="space-y-3">
+            
+            <div class="hover-card p-3.5 sm:p-5">
+              <h3 class="text-[11px] font-mono font-semibold uppercase text-slate-400 tracking-wider mb-2">
+                Data & Cloud Infrastructure
+              </h3>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">PostgreSQL (Azure)</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Google BigQuery</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">MySQL</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Star Schema Modeling</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">ETL Pipeline Design</span>
+              </div>
+            </div>
+
+            <div class="hover-card p-3.5 sm:p-5">
+              <h3 class="text-[11px] font-mono font-semibold uppercase text-slate-400 tracking-wider mb-2">
+                Business Intelligence & Visualization
+              </h3>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Tableau Desktop & Public</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Power BI</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Looker Studio</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Advanced Excel (Power Query)</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Python (Pandas, NumPy)</span>
+              </div>
+            </div>
+
+            <div class="hover-card p-3.5 sm:p-5">
+              <h3 class="text-[11px] font-mono font-semibold uppercase text-slate-400 tracking-wider mb-2">
+                Enterprise ERPs & Operational Systems
+              </h3>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700 border border-blue-100 font-semibold">Microsoft Dynamics 365</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Tally ERP</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Material Requirements Planning (MRP)</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Inventory Reconciliation</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Google Apps Script</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800">Power Automate</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- SECTION 6: BACKGROUND & CREDENTIALS -->
+        <!-- ========================================== -->
+        <section id="credentials" class="scroll-mt-16 lg:scroll-mt-16 reveal-on-scroll">
+          <!-- Mobile Sticky Header -->
+          <div class="sticky top-0 z-20 py-2.5 bg-[#F9FAFB]/95 backdrop-blur-md border-b border-slate-200/60 mb-3.5 lg:sr-only">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">06 // Background</h2>
+          </div>
+
+          <div class="space-y-3">
+            
+            <div class="hover-card p-3.5 sm:p-5">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                <h3 class="text-sm sm:text-base font-bold text-slate-900">
+                  Universitas Gadjah Mada (UGM)
+                </h3>
+                <span class="text-xs font-mono text-slate-400">2016 &ndash; 2023</span>
+              </div>
+              <h4 class="text-xs font-medium text-blue-600 mb-1.5">
+                Bachelor of Animal Science and Industry
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Served as Researcher & Laboratory Assistant at the Animal Nutrition Lab (2018&ndash;2021). Handled biological feeding trials, trial experiment design, and quantitative statistical validation using SPSS and Excel.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="hover-card p-3.5 sm:p-4">
+                <h4 class="text-[11px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Certifications</h4>
+                <ul class="space-y-1 text-xs text-slate-700">
+                  <li>&bull; DQLab Data Science Trainee (Python, MySQL)</li>
+                  <li>&bull; SQL & Data Analytics Certifications</li>
+                  <li>&bull; Kaggle Data Contributor</li>
+                </ul>
+              </div>
+
+              <div class="hover-card p-3.5 sm:p-4">
+                <h4 class="text-[11px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Languages</h4>
+                <ul class="space-y-0.5 text-xs text-slate-700">
+                  <li><strong class="text-slate-900">English:</strong> Professional Working (B2)</li>
+                  <li><strong class="text-slate-900">Indonesian:</strong> Native</li>
+                  <li><strong class="text-slate-900">Javanese:</strong> Native</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- SECTION 7: CONTACT -->
+        <!-- ========================================== -->
+        <section id="contact" class="scroll-mt-16 lg:scroll-mt-16 pb-12 lg:pb-16 reveal-on-scroll">
+          <!-- Mobile Sticky Header -->
+          <div class="sticky top-0 z-20 py-2.5 bg-[#F9FAFB]/95 backdrop-blur-md border-b border-slate-200/60 mb-3.5 lg:sr-only">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">07 // Contact</h2>
+          </div>
+
+          <div class="hover-card p-4 sm:p-6">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5">Get in Touch</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 max-w-lg">
+              I am open to full-time roles, contract work, and consulting projects in data analytics, cloud pipelines, and operations planning. Feel free to reach out directly:
+            </p>
+
+            <div class="flex flex-wrap items-center gap-2">
+              <a 
+                href="mailto:ramawijaya.business@gmail.com" 
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-600 text-white text-xs font-semibold hover:bg-blue-700 active:scale-95 transition-all shadow-xs"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>ramawijaya.business@gmail.com</span>
+              </a>
+
+              <a 
+                href="https://wa.me/6285783038095" 
+                target="_blank" 
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 active:scale-95 transition-all shadow-xs"
+              >
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.53c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.26-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.13.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+            <div class="mt-4 pt-3.5 border-t border-slate-200/50 flex flex-wrap items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Jepara, Central Java, Indonesia</span>
+              <span>Remote / Relocation</span>
+            </div>
+          </div>
+
+          <footer class="mt-10 text-center text-xs text-slate-400 font-mono">
+            <p>&copy; 2026 Rama Wijaya &bull; Hosted on GitHub Pages</p>
+          </footer>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- FLOATING MOBILE QUICK DOCK (Visible on mobile/tablet screens only) -->
+  <!-- ===================================================================== -->
+  <div class="fixed bottom-3 inset-x-3 z-40 lg:hidden flex items-center justify-between gap-2 px-3.5 py-2 rounded-2xl bg-white/95 backdrop-blur-lg border border-slate-200/90 shadow-xl shadow-slate-900/10" style="bottom: max(0.75rem, env(safe-area-inset-bottom, 0.75rem));">
+    <div class="flex items-center gap-1.5 text-xs font-semibold text-slate-800">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span class="truncate max-w-[120px]">Rama Wijaya</span>
+    </div>
+
+    <div class="flex items-center gap-1.5">
+      <a 
+        href="#projects" 
+        class="inline-flex items-center px-2.5 py-1.5 rounded-xl bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200 transition-colors"
+      >
+        Projects
+      </a>
+
+      <a 
+        href="https://wa.me/6285783038095" 
+        target="_blank" 
+        class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-600 text-white text-xs font-semibold active:scale-95 transition-all shadow-xs"
+      >
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.53c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.26-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.13.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
+        <span>Chat</span>
+      </a>
+
+      <a 
+        href="mailto:ramawijaya.business@gmail.com" 
+        class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-semibold active:scale-95 transition-all shadow-xs"
+      >
+        <span>Email</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-16 sm:bottom-6 right-4 sm:right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-xl border border-slate-700">
+      <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+      </svg>
+      <span>Email copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- Client-side Interactive Script -->
+  <script>
+    // 1. Reading Progress Bar (Top Micro Rail)
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      if (progressBar) progressBar.style.width = scrolled + '%';
+    }, { passive: true });
+
+    // 2. Scroll Reveal Observer (Smooth Staggered Entrance)
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { root: null, rootMargin: '0px 0px -40px 0px', threshold: 0.08 });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 3. Spotlight Effect Tracking (Desktop only)
+    window.addEventListener('mousemove', (e) => {
+      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+    });
+
+    // 4. Scrollspy Navigation (Desktop only)
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    function updateActiveNav() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      let currentSectionId = '';
+
+      // Bottom-of-page safeguard: If scrolled to the bottom, reliably activate Contact (#07)
+      if (scrollY + windowHeight >= documentHeight - 60) {
+        currentSectionId = 'contact';
+      } else {
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 150;
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+      }
+
+      navItems.forEach((item) => {
+        if (item.getAttribute('data-section') === currentSectionId) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    // 5. Copy Email to Clipboard
+    function copyEmailToClipboard() {
+      const email = 'ramawijaya.business@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.remove('translate-y-20', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        const btnText = document.getElementById('copy-email-text');
+        if (btnText) btnText.textContent = 'Copied!';
+
+        setTimeout(() => {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('translate-y-20', 'opacity-0');
+          if (btnText) btnText.textContent = 'Copy Email';
+        }, 2500);
+      }).catch(err => {
+        console.error('Failed to copy email:', err);
+      });
+    }
+  </script>
+
+</body>
 </html>
