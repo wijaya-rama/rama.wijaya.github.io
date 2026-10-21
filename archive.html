@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>All Projects Archive | Rama Wijaya — Data Analyst</title>
+  <meta name="description" content="Comprehensive project archive of Rama Wijaya: Data Analyst specializing in Operations Planning, Agribusiness Analytics, Cloud Data Pipelines, and Business Intelligence." />
+  <link rel="canonical" href="https://wijaya-rama.github.io/archive.html" />
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Top scroll progress */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2.5px;
+      width: 0%;
+      background: linear-gradient(90deg, #2563eb, #3b82f6, #06b6d4);
+      z-index: 100;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Subtle cursor spotlight */
+    .spotlight {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      transition: opacity 0.3s;
+      background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(37, 99, 235, 0.04), transparent 80%);
+    }
+
+    /* Filter button active styles */
+    .filter-btn.active {
+      background-color: #1e293b;
+      color: #ffffff;
+      border-color: #1e293b;
+    }
+  </style>
+</head>
+<body class="bg-[#F9FAFB] text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-900 min-h-screen relative">
+
+  <!-- Top Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Cursor Spotlight -->
+  <div class="spotlight hidden lg:block" id="spotlight"></div>
+
+  <!-- Main Container -->
+  <div class="max-w-6xl mx-auto px-6 py-12 md:py-20 lg:py-24">
+
+    <!-- Back to Home Link -->
+    <div class="mb-8">
+      <a 
+        href="index.html" 
+        class="group inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+      >
+        <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>Rama Wijaya</span>
+      </a>
+    </div>
+
+    <!-- Header Section -->
+    <header class="mb-10 md:mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/60 text-blue-700 text-xs font-mono font-medium mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+        <span>INDEX &amp; ARCHIVE</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+        All Projects
+      </h1>
+      <p class="text-slate-600 text-base md:text-lg max-w-2xl leading-relaxed">
+        A comprehensive archive of operational planning models, business intelligence dashboards, cloud database pipelines, and exploratory research across agribusiness, retail operations, and healthcare analytics.
+      </p>
+    </header>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap items-center gap-2 mb-8 text-xs font-medium" id="filter-bar">
+      <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-slate-700 hover:bg-slate-100 transition-all shadow-sm">
+        All Projects (12)
+      </button>
+      <button onclick="filterProjects('agribusiness')" class="filter-btn px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-slate-700 hover:bg-slate-100 transition-all shadow-sm">
+        Agribusiness &amp; Livestock
+      </button>
+      <button onclick="filterProjects('operations')" class="filter-btn px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-slate-700 hover:bg-slate-100 transition-all shadow-sm">
+        Operations &amp; Pipelines
+      </button>
+      <button onclick="filterProjects('bi')" class="filter-btn px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-slate-700 hover:bg-slate-100 transition-all shadow-sm">
+        Tableau &amp; BI Dashboards
+      </button>
+      <button onclick="filterProjects('analytics')" class="filter-btn px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-slate-700 hover:bg-slate-100 transition-all shadow-sm">
+        SQL &amp; Machine Learning
+      </button>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- DESKTOP ARCHIVE TABLE (Visible on md and up)              -->
+    <!-- ======================================================== -->
+    <div class="hidden md:block overflow-x-auto">
+      <table class="w-full text-left border-collapse" id="archive-table">
+        <thead>
+          <tr class="border-b border-slate-200 text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
+            <th class="py-4 pr-6 w-16">Year</th>
+            <th class="py-4 pr-6 w-1/3">Project</th>
+            <th class="py-4 pr-6 w-1/4">Made at / Domain</th>
+            <th class="py-4 pr-6">Built with</th>
+            <th class="py-4 text-right w-28">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 text-sm">
+
+          <!-- 1. FEEDLOT -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="agribusiness bi">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2024</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <a href="https://wijaya-rama.github.io/portfolio-feedlot-management/" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
+                Commercial Beef Feedlot Operations &amp; Closeout Economics
+              </a>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Agribusiness Operations
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">PostgreSQL</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Star Schema</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Executive Storyboard</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <a href="https://wijaya-rama.github.io/portfolio-feedlot-management/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors">
+                <span>Live Story</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </td>
+          </tr>
+
+          <!-- 2. BROILER -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="agribusiness bi">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2024</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <a href="https://wijaya-rama.github.io/portfolio-smart-broiler/" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
+                Commercial Broiler Operations Hub &amp; Yield Audit
+              </a>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Poultry Integration
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">EPEF / IP Metrics</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">FCR Analysis</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Microclimate Drag</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <a href="https://wijaya-rama.github.io/portfolio-smart-broiler/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors">
+                <span>Live Story</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </td>
+          </tr>
+
+          <!-- 3. RETAIL -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="operations bi">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2024</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <a href="https://wijaya-rama.github.io/portfolio-retail-workforce/" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
+                Retail Workforce Productivity &amp; Attrition Analysis
+              </a>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                People Analytics
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Python</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">9-Box Grid</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Attrition Modeling</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <a href="https://wijaya-rama.github.io/portfolio-retail-workforce/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors">
+                <span>Live Story</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </td>
+          </tr>
+
+          <!-- 4. LAYER POULTRY -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="agribusiness bi">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2024</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <a href="https://wijaya-rama.github.io/portfolio-layer-poultry/" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
+                Commercial Layer Operations &amp; Egg Market Intelligence
+              </a>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Commercial Layer Poultry
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Hen-Day Persistence</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">FCR Sensitivity</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Executive Storyboard</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <a href="https://wijaya-rama.github.io/portfolio-layer-poultry/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors">
+                <span>Live Story</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </td>
+          </tr>
+
+          <!-- 5. AZURE POSTGRESQL & POWER BI -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="operations">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2024</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <span>Enterprise Cloud Database &amp; Automated Pipeline</span>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                PT Indonesia Livestock Operations
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Azure PostgreSQL</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Power BI</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Power Automate</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Dynamics 365</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <span class="inline-flex items-center gap-1 text-xs font-medium text-slate-400">
+                <span>Internal Prod</span>
+              </span>
+            </td>
+          </tr>
+
+          <!-- 6. BIGQUERY WAREHOUSE -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="operations agribusiness">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2024</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <span>Centralized BigQuery Warehouse &amp; ERP Reconciliation</span>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                PT Indo Prima Beef
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Google BigQuery</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Apps Script</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Looker Studio</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Tally ERP</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <span class="inline-flex items-center gap-1 text-xs font-medium text-slate-400">
+                <span>Internal Prod</span>
+              </span>
+            </td>
+          </tr>
+
+          <!-- 7. INVESTMENT AUDIT -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="analytics operations">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2024</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <span>Operational &amp; Financial Transaction Audit Pipeline</span>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                Investment Advisory Engagement
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">SQL</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Python</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Pandas</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Discrepancy Audits</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <span class="inline-flex items-center gap-1 text-xs font-medium text-slate-400">
+                <span>Client Advisory</span>
+              </span>
+            </td>
+          </tr>
+
+          <!-- 8. FEMALEDAILY SKINCARE -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="bi analytics">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2023</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <a href="https://public.tableau.com/app/profile/rama.wijaya8072/viz/Top7IndonesiaSkincarefromFemaledaily_com/Dashboard1" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
+                Top 7 Indonesian Skincare Market &amp; Sentiment Analysis
+              </a>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                FemaleDaily Data Scraping
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau Public</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Python</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Web Scraping</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">NLP Sentiment</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <a href="https://public.tableau.com/app/profile/rama.wijaya8072/viz/Top7IndonesiaSkincarefromFemaledaily_com/Dashboard1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-[#E97627] transition-colors">
+                <span>Tableau</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </td>
+          </tr>
+
+          <!-- 9. KAGGLE SLEEP STATES -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="analytics">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2023</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <a href="https://www.kaggle.com/code/rimbax/detection-converting-hour-into-periodic-signal" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
+                Child Mind Institute - Detect Sleep States Competition
+              </a>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                Kaggle ML Competition
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">Python</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Time Series</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Signal Processing</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Google Colab</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <a href="https://www.kaggle.com/code/rimbax/detection-converting-hour-into-periodic-signal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors">
+                <span>Kaggle Notebook</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </td>
+          </tr>
+
+          <!-- 10. COVID-19 SQL -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="analytics">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2023</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <a href="https://github.com/wijaya-rama/wijaya-rama/blob/main/COVID%2019%20Portfolio%20Project%20-%20Data%20Exploration.sql" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
+                Global COVID-19 Epidemiological Data Exploration
+              </a>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                Public Health Analytics
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">SQL Server</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">T-SQL CTEs</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Window Functions</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Rolling Aggregations</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <a href="https://github.com/wijaya-rama/wijaya-rama/blob/main/COVID%2019%20Portfolio%20Project%20-%20Data%20Exploration.sql" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors">
+                <span>SQL Script</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </td>
+          </tr>
+
+          <!-- 11. CHICKEN DISTRIBUTION -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="agribusiness bi">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2023</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <a href="https://lookerstudio.google.com/reporting/7b01a7d7-6a3f-48dd-9ec2-e96eb6367e64" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
+                Indonesia Chicken Population Geographic Distribution
+              </a>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Livestock Economics
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">Looker Studio</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Google Sheets</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Geospatial Mapping</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <a href="https://lookerstudio.google.com/reporting/7b01a7d7-6a3f-48dd-9ec2-e96eb6367e64" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors">
+                <span>Looker Studio</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </td>
+          </tr>
+
+          <!-- 12. UGM NUTRITION RESEARCH -->
+          <tr class="project-row group hover:bg-blue-50/40 transition-colors" data-category="agribusiness analytics">
+            <td class="py-4 pr-6 font-mono text-xs text-slate-400 whitespace-nowrap align-top">2021</td>
+            <td class="py-4 pr-6 font-bold text-slate-900 group-hover:text-blue-600 transition-colors align-top">
+              <span>Livestock Feed Formulation &amp; Biological Nutrient Modeling</span>
+            </td>
+            <td class="py-4 pr-6 text-slate-600 align-top">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                UGM Animal Nutrition Lab
+              </span>
+            </td>
+            <td class="py-4 pr-6 align-top">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-blue-50 text-blue-700 border border-blue-100">SPSS</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Advanced Excel</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Pearson Square</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-100 text-slate-700">Trial Design</span>
+              </div>
+            </td>
+            <td class="py-4 text-right align-top whitespace-nowrap">
+              <span class="inline-flex items-center gap-1 text-xs font-medium text-slate-400">
+                <span>Academic Thesis</span>
+              </span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MOBILE CARDS VIEW (Visible on mobile < md)               -->
+    <!-- ======================================================== -->
+    <div class="md:hidden space-y-4" id="archive-mobile-cards">
+
+      <!-- 1. FEEDLOT -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="agribusiness bi">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2024</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Agribusiness Operations
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          <a href="https://wijaya-rama.github.io/portfolio-feedlot-management/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+            Commercial Beef Feedlot Operations &amp; Closeout Economics ↗
+          </a>
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">PostgreSQL</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Star Schema</span>
+        </div>
+        <a href="https://wijaya-rama.github.io/portfolio-feedlot-management/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700">
+          <span>View Live Dashboard &amp; Story</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- 2. BROILER -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="agribusiness bi">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2024</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Poultry Integration
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          <a href="https://wijaya-rama.github.io/portfolio-smart-broiler/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+            Commercial Broiler Operations Hub &amp; Yield Audit ↗
+          </a>
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">EPEF Metrics</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">FCR Analysis</span>
+        </div>
+        <a href="https://wijaya-rama.github.io/portfolio-smart-broiler/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700">
+          <span>View Live Dashboard &amp; Story</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- 3. RETAIL -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="operations bi">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2024</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+            People Analytics
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          <a href="https://wijaya-rama.github.io/portfolio-retail-workforce/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+            Retail Workforce Productivity &amp; Attrition Analysis ↗
+          </a>
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Python</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">9-Box Grid</span>
+        </div>
+        <a href="https://wijaya-rama.github.io/portfolio-retail-workforce/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700">
+          <span>View Live Dashboard &amp; Story</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- 4. LAYER POULTRY -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="agribusiness bi">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2024</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Commercial Layer Poultry
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          <a href="https://wijaya-rama.github.io/portfolio-layer-poultry/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+            Commercial Layer Operations &amp; Egg Market Intelligence ↗
+          </a>
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Hen-Day Curve</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">FCR Economics</span>
+        </div>
+        <a href="https://wijaya-rama.github.io/portfolio-layer-poultry/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700">
+          <span>View Live Dashboard &amp; Story</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- 5. AZURE POSTGRESQL -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="operations">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2024</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+            PT Indonesia Livestock Operations
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          Enterprise Cloud Database &amp; Automated Pipeline
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Azure PostgreSQL</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Power BI</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Dynamics 365</span>
+        </div>
+        <span class="text-xs text-slate-400 font-mono">Internal Production System</span>
+      </div>
+
+      <!-- 6. BIGQUERY -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="operations agribusiness">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2024</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+            PT Indo Prima Beef
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          Centralized BigQuery Warehouse &amp; ERP Reconciliation
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Google BigQuery</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Apps Script</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Tally ERP</span>
+        </div>
+        <span class="text-xs text-slate-400 font-mono">Internal Production System</span>
+      </div>
+
+      <!-- 7. INVESTMENT AUDIT -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="analytics operations">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2024</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+            Investment Advisory Engagement
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          Operational &amp; Financial Transaction Audit Pipeline
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">SQL</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Python</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Pandas</span>
+        </div>
+        <span class="text-xs text-slate-400 font-mono">Client Advisory Engagement</span>
+      </div>
+
+      <!-- 8. FEMALEDAILY -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="bi analytics">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2023</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+            Consumer Market Data
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          <a href="https://public.tableau.com/app/profile/rama.wijaya8072/viz/Top7IndonesiaSkincarefromFemaledaily_com/Dashboard1" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+            Top 7 Indonesian Skincare Market &amp; Sentiment Analysis ↗
+          </a>
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">Tableau Public</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Python</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">NLP Sentiment</span>
+        </div>
+        <a href="https://public.tableau.com/app/profile/rama.wijaya8072/viz/Top7IndonesiaSkincarefromFemaledaily_com/Dashboard1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E97627] hover:underline">
+          <span>Open Tableau Public Viz</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- 9. KAGGLE -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="analytics">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2023</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+            Kaggle Competition
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          <a href="https://www.kaggle.com/code/rimbax/detection-converting-hour-into-periodic-signal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+            Child Mind Institute - Detect Sleep States ↗
+          </a>
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">Python</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Signal Processing</span>
+        </div>
+        <a href="https://www.kaggle.com/code/rimbax/detection-converting-hour-into-periodic-signal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700">
+          <span>View Kaggle Notebook</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- 10. COVID -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="analytics">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2023</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+            Public Health Analytics
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          <a href="https://github.com/wijaya-rama/wijaya-rama/blob/main/COVID%2019%20Portfolio%20Project%20-%20Data%20Exploration.sql" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+            Global COVID-19 Epidemiological Exploration ↗
+          </a>
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">SQL Server</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">CTEs &amp; Window Functions</span>
+        </div>
+        <a href="https://github.com/wijaya-rama/wijaya-rama/blob/main/COVID%2019%20Portfolio%20Project%20-%20Data%20Exploration.sql" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700">
+          <span>View SQL Script on GitHub</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- 11. CHICKEN DISTRIBUTION -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="agribusiness bi">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2023</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Livestock Economics
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          <a href="https://lookerstudio.google.com/reporting/7b01a7d7-6a3f-48dd-9ec2-e96eb6367e64" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+            Indonesia Chicken Population Distribution ↗
+          </a>
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">Looker Studio</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">GIS Mapping</span>
+        </div>
+        <a href="https://lookerstudio.google.com/reporting/7b01a7d7-6a3f-48dd-9ec2-e96eb6367e64" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700">
+          <span>View Looker Studio Report</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- 12. UGM NUTRITION -->
+      <div class="project-card bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm" data-category="agribusiness analytics">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span class="font-mono text-slate-400">2021</span>
+          <span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+            UGM Nutrition Lab
+          </span>
+        </div>
+        <h3 class="font-bold text-slate-900 text-base mb-2">
+          Livestock Feed Formulation &amp; Nutrient Modeling
+        </h3>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-100">SPSS</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700">Excel Modeling</span>
+        </div>
+        <span class="text-xs text-slate-400 font-mono">Academic Research</span>
+      </div>
+
+    </div>
+
+    <!-- Bottom Navigation / Back Home Footer -->
+    <div class="mt-16 pt-8 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <a 
+        href="index.html" 
+        class="inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>Back to Rama Wijaya Portfolio</span>
+      </a>
+      <p class="font-mono">
+        &copy; 2026 Rama Wijaya &bull; Built with precision &bull; Hosted on GitHub Pages
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Interactive Filter & Motion Script -->
+  <script>
+    // Filter logic
+    function filterProjects(category) {
+      // Update buttons
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Filter desktop rows
+      const rows = document.querySelectorAll('.project-row');
+      rows.forEach(row => {
+        const cats = row.getAttribute('data-category') || '';
+        if (category === 'all' || cats.includes(category)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      // Filter mobile cards
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        const cats = card.getAttribute('data-category') || '';
+        if (category === 'all' || cats.includes(category)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      const bar = document.getElementById('scroll-progress');
+      if (bar) bar.style.width = scrolled + '%';
+    }, { passive: true });
+
+    // Cursor spotlight
+    const spotlight = document.getElementById('spotlight');
+    if (spotlight) {
+      window.addEventListener('mousemove', (e) => {
+        spotlight.style.setProperty('--x', `${e.clientX}px`);
+        spotlight.style.setProperty('--y', `${e.clientY}px`);
+      });
+    }
+  </script>
+
+</body>
+</html>

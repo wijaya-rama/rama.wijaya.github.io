@@ -1,3 +1,15 @@
+# Local & OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
 
+# IDE & Editors
+.vscode/
+.idea/
+
+# Local Legacy Backups
 archive_old_site/
 
+# Logs & Temporary files
+*.log
+*.tmp
