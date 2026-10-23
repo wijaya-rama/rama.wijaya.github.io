@@ -2,7 +2,7 @@
 
 Source code for Rama Wijaya's personal portfolio website, hosted on GitHub Pages.
 
-**Live:** [wijaya-rama.github.io]([https://wijaya-rama.github.io](https://wijaya-rama.github.io/rama.wijaya.github.io/) 
+**Live:** [https://wijaya-rama.github.io](https://wijaya-rama.github.io/rama.wijaya.github.io/)
 **Archive:** [wijaya-rama.github.io/archive.html](https://wijaya-rama.github.io/archive.html)
 
 ## Structure
